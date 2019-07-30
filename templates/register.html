@@ -1,0 +1,26 @@
+<!doctype html>
+<title>Brew</title>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+
+<h1>want a cuppa?</h>
+
+
+<br></br>
+
+
+<h1>enter name</h>
+
+<form method="POST" action="/thirsty">
+    {{form.csrf_token}}
+    {{form.username}}
+    <input type="submit" name = "coffeetea" value="WANT'S A COFFEE">
+    <input type="submit" name = "coffeetea" value="WANT'S A TEA">
+</form>
+    
+<form method="POST" action="/thirsty">
+<input type="submit" name = "coffeetea" value="HOME">
+</form>
+
+<body>
+<body bgcolor="#edc58a">

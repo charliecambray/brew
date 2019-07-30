@@ -1,0 +1,22 @@
+<!doctype html>
+<title>Brew</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+<h1>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <h1>{{ message }}</h1>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<form method="POST" action="/clearcuppas">
+    <input type="submit" name ="clearList" value="CLEAR CUPPAS">
+    <input type="submit" name ="clearList" value="HOME">
+</form>
+</h1>
+<br></br>
+<body><body bgcolor="#edc58a">

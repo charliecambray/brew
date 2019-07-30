@@ -1,0 +1,19 @@
+<!doctype html>
+<title>Brew</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+<ul>
+    <h1>who wants a cuppa?</h>
+    <img src="/static/teacup.gif" alt="cuppa" align="middle" width="200px" height="auto">
+    {% for name in nameList %}
+        {% if name != '' %}
+            <h2>{{name}}</h2>
+            <p>{{timeStampList[nameList.index(name)]}}</p>
+        {% endif %}
+    {% endfor %}
+    <br> </br>
+    <p><body link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF"> <a href="http://tiantianxu.com/">Image by Tiantian Xu</a></p>
+</ul>
+<body>
+<body bgcolor="#edc58a">
+<meta http-equiv="refresh" content="30">
+</body>
